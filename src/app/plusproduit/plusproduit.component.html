@@ -1,0 +1,10 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmitForm()">
+    <label>identifiant</label>
+    <input type="number" id="id" name="id" class="form-control" formControlName="id" >
+    <div *ngIf="idProduct.invalid && idProduct.dirty" class="alert alert-danger"> L'identifiant est obligatoire </div>
+    <label>Libelle</label>
+    <input type="text" id="lib" name="libelle" class="form-control" formControlName="libelle" >
+    <div *ngIf=" libProd.errors?.pattern" class="alert alert-danger"> Libelle doit avoir la 1er lettre maj  </div>
+    <button type="submit" [disabled]="productForm.invalid" >Ajouter</button>
+    <button type="reset">Vider</button>
+</form>

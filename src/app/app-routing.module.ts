@@ -6,11 +6,13 @@ import { AcceuilComponent } from './application/acceuil/acceuil.component';
 import { Error404Component } from './application/error404/error404.component';
 import { ProduitsComponent } from './application/produits/produits.component';
 import { AddProduitComponent } from './application/add-produit/add-produit.component';
+import { PlusproduitComponent } from './plusproduit/plusproduit.component';
 const routes: Routes = [
   {path:'acceuil', component:AcceuilComponent}, 
   {path:'produits', component:ProduitsComponent}, 
   {path:'contact', component:ContactComponent}, 
-  {path:'add-produit', component:AddProduitComponent}, 
+  {path:'add-produit', component:AddProduitComponent},
+  {path:'plusproduit',component:PlusproduitComponent}, 
   {path:'produits/:id', component:ProduitComponent},
   {path:'', redirectTo:'acceuil', pathMatch:'full'},
   {path:'**', component:Error404Component}
